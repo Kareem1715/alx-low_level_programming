@@ -6,7 +6,10 @@ int write(int filedes, const char *buf, unsigned int nbyte);
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 1 (Not Success)
+ *
+ * Description: strlen used for count the number of cahr in statement
+ * to use it in write.
  */
 int main(void)
 {
