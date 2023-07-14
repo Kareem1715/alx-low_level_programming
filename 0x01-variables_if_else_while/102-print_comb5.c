@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  *
- * Description: compination of two digit of numbers
+ * Description: compination of two digit of numbers with putchar
  */
 int main(void)
 {
