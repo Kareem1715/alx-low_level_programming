@@ -19,7 +19,7 @@ int main(void)
 			{
 				for (l = '0'; l <= '9'; l++)
 				{
-					if (i == k || j == l)
+					if (i == k && j == l)
 						continue;
 					putchar(i);
 					putchar(j);
@@ -32,6 +32,7 @@ int main(void)
 					putchar(' ');
 				}
 			}
+			l += 1;
 		}
 	}
 	putchar('\n');
