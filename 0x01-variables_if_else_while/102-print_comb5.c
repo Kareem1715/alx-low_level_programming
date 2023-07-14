@@ -31,7 +31,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-				l++;
+				l += 1;
 			}
 		}
 	}
