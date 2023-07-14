@@ -29,9 +29,11 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
+			if (i == k && j == l)
+				continue;
 			}
 		}
-		if ( i == k && j == l)
+		if (i == k && j == l)
 			continue;
 	}
 	putchar('\n');
