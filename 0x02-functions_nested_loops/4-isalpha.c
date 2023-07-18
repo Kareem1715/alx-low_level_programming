@@ -3,7 +3,7 @@
 /**
  * _isalpha - check the code.
  *
- * @c: parametrs recieved by calling the function.
+ * @c: Parametrs recieved by calling the function.
  *
  * Return: Depend on the return value is alpha or not.
  */
