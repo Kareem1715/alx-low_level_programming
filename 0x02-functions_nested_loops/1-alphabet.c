@@ -5,16 +5,16 @@
  *
  * Description: print alphatbet lowercase a to z
  *
- * Return: Always 0.
+ * Return: Alway return true void funciton.
  */
 void print_alphabet(void)
 {
     int i;
-    
+
     for (i = 'a'; i <= 'z'; i++)
-        putchar(i);
+        _putchar(i);
 
-    putchar('\n');
+    _putchar('\n');
 
-    return (0);
+    return;
 }
