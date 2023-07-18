@@ -3,7 +3,7 @@
 /**
  * print_sign - function defination.
  *
- * @n: parametrs recieved by function calling.
+ * @n: Parametrs recieved by function calling.
  *
  * Description: check if number is zero or positive or negative.
  *
