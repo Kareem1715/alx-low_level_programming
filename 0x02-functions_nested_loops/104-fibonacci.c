@@ -11,7 +11,7 @@
 int main(void)
 {
 	int i;
-	unsigned long prev, preprev, sum,
+	unsigned long prev, preprev, sum;
 
 
 	prev = 2, preprev = 1;
