@@ -15,17 +15,17 @@ int main(void)
 	prev = 2, preprev = 1;
 	for (i = 2; i < 50; i++)
 	{
-        if (prev % 2 == 0) /*Add the even fabonacci only*/
-            total += prev;
+		if (prev % 2 == 0) /*Add the even fabonacci only*/
+			total += prev;
 
-        /*Fabonacci number*/
+		/*Fabonacci number*/
 		sum = prev + preprev;
 		preprev = prev;
 		prev = sum;
-    
-        if (prev >= 4000000)
-            break;
+
+		if (prev >= 4000000)
+			break;
 	}
-    printf("%ld\n", total);    
+	printf("%ld\n", total);
 	return (0);
 }
