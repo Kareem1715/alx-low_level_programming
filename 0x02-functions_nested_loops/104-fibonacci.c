@@ -31,13 +31,10 @@ int main(void)
 			printf("%lu%010lu", fibo2_nd, fibo2);
 			/**
 			 * I add 010 between % and lu means that (0 --> 10) add leading zeros
-			 * for 10 length of digit
 			 * because modulus ignore zero so we add leading zero if any.
 			 * example: 20365011074 when we make the division
 			 * to 10^10 --> 2.0365011074 we take 2
-			 * and when we make the modulus
 			 * to 10^10 --> 365011074 and ignore the 0 in the begin
-			 *
 			 */
 		}
 		else
@@ -50,7 +47,6 @@ int main(void)
 		if (i != 97)
 			printf(", ");
 	}
-
 	printf("\n");
 	return (0);
 }
