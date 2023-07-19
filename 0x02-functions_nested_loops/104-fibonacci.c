@@ -18,7 +18,7 @@ int main(void)
 	for (i = 2; i <= 98; i++)
 	{
 		sum = prev + preprev;
-		if (prev > 1000000000000000000)
+		if (sum > 1000000000000000000)
 		{
 			printf("%lu", prev / 10000000000);
 			printf("%lu, ", prev % 1000000000);
