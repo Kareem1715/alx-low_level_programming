@@ -18,7 +18,10 @@ int main(void)
 	for (i = 2; i < 50; i++)
 	{
 		sum = prev + preprev;
-		printf("%ld, ", sum);
+		if (i != 49)
+			printf("%ld, ", sum);
+		else
+			printf("%ld", sum);
 		preprev = prev;
 		prev = sum;
 	}
