@@ -19,7 +19,7 @@ int main(void)
 
 	for (i = 2; i < 98; i++)
 	{
-		if ((fibo1 + fibo2) > 10000000000)
+		if ((fibo1 + fibo2) > 10000000000 || fibo1_nd > 0 || fibo2_nd > 0)
 		{
 			sum1 = (fibo1 + fibo2) / 10000000000;
 			sum2 = (fibo1 + fibo2) % 10000000000;
@@ -28,7 +28,7 @@ int main(void)
 			fibo2_nd = sum3;
 			fibo1 = fibo2;
 			fibo2 = sum2;
-			printf("%lu%lu", fibo2_nd, fibo2);		
+			printf("%lu%lu", fibo2_nd, fibo2);
 		}
 		else
 		{
