@@ -10,24 +10,22 @@
  */
 int main(void)
 {
-	long i, prev, preprev, sum = 0;
+	long i, prev, preprev, sum = 0, total = 0;
 
 	prev = 2, preprev = 1;
-	printf("%ld, %ld, ", preprev, prev);
-
 	for (i = 2; i < 50; i++)
 	{
+        if (prev % 2 == 0) /*Add the even fabonacci only*/
+            total += prev;
+
+        /*Fabonacci number*/
 		sum = prev + preprev;
-        if (sum % 2 == 0)
-        {
-            if (i != 49)
-                printf("%ld, ", sum);
-            else
-                printf("%ld", sum);            
-        }
 		preprev = prev;
 		prev = sum;
+    
+        if (prev >= 4000000)
+            break;
 	}
-	printf("\n");
+    printf("%ld\n", total);    
 	return (0);
 }
