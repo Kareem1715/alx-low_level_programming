@@ -6,30 +6,40 @@
  *
  * Return: Always 0 (Success)
  *
- * Description: Fabonacci of number
+ * Description: Fibonacci of number
  */
 int main(void)
 {
 	int i;
-	unsigned long prev, preprev, sum;
+	unsigned long fibo1, fibo2, sum,
+	fibo1_nd, fibo2_nd, sum1, sum2, sum3;
 
+	fibo1 = 1, fibo2 = 2; 
+	printf("%lu, %lu, ", fibo1, fibo2);
 
-	prev = 2, preprev = 1;
-	printf("%lu, %lu, ", preprev, prev);
-
-	for (i = 2; i <= 98; i++)
+	for (i = 2; i < 92; i++)
 	{
-
-		sum = prev + preprev;
-		if (i != 98)
-			printf("%lu, ", sum);
-		else
-			printf("%lu", sum);
-
-		preprev = prev;
-		prev = sum;
+		sum = fibo1 + fibo2;
+		printf("%lu, ", sum);
+		fibo1 = fibo2;
+		fibo2 = sum;
 	}
-	printf("\n");
 
+	for (i = 92; i < 98; i++)
+	{
+		sum1 = (fibo1 + fibo2) / 10000000000;
+		sum2 = (fibo1 + fibo2) % 10000000000;
+		sum3 = fibo1_nd + fibo2_nd + sum1;
+		fibo1_nd = fibo2_nd;
+		fibo2_nd = sum3;
+		fibo1 = fibo2;
+		fibo2 = sum2;
+		printf("%lu%lu", fibo2_nd, fibo2);
+
+		if (i != 97)
+			printf(", ");
+	}
+
+	printf("\n");
 	return (0);
 }
