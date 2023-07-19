@@ -17,25 +17,26 @@ int main(void)
 	fibo1 = 1, fibo2 = 2;
 	printf("%lu, %lu, ", fibo1, fibo2);
 
-	for (i = 2; i < 92; i++)
+	for (i = 2; i < 98; i++)
 	{
-		sum = fibo1 + fibo2;
-		printf("%lu, ", sum);
-		fibo1 = fibo2;
-		fibo2 = sum;
-	}
-
-	for (i = 92; i < 98; i++)
-	{
-		sum1 = (fibo1 + fibo2) / 10000000000;
-		sum2 = (fibo1 + fibo2) % 10000000000;
-		sum3 = fibo1_nd + fibo2_nd + sum1;
-		fibo1_nd = fibo2_nd;
-		fibo2_nd = sum3;
-		fibo1 = fibo2;
-		fibo2 = sum2;
-		printf("%lu%lu", fibo2_nd, fibo2);
-
+		if ((fibo1 + fibo2) > 10000000000)
+		{
+			sum1 = (fibo1 + fibo2) / 10000000000;
+			sum2 = (fibo1 + fibo2) % 10000000000;
+			sum3 = fibo1_nd + fibo2_nd + sum1;
+			fibo1_nd = fibo2_nd;
+			fibo2_nd = sum3;
+			fibo1 = fibo2;
+			fibo2 = sum2;
+			printf("%lu%lu", fibo2_nd, fibo2);			
+		}
+		else
+		{
+			sum = fibo1 + fibo2;
+			printf("%lu, ", sum);
+			fibo1 = fibo2;
+			fibo2 = sum;			
+		}
 		if (i != 97)
 			printf(", ");
 	}
