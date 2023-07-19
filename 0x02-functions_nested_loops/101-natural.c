@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include "main.h"
+
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ *
+ * Description: sum of natural number.
+ */
+int main(void)
+{
+	int i, sum = 0;
+
+	for (i = 1024; i > 0; i--)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+			sum += i;
+	}
+	printf("%d\n", sum);
+}
+s
