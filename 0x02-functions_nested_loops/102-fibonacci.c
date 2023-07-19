@@ -25,5 +25,6 @@ int main(void)
 		preprev = prev;
 		prev = sum;
 	}
+	printf("\n");
 	return (0);
 }
