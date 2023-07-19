@@ -10,18 +10,18 @@
  */
 int main(void)
 {
-     long double i, prev, preprev, sum = 0;
+     long unsigned int i, prev, preprev, sum = 0;
 
 	prev = 2, preprev = 1;
-	printf("%Lf, %Lf, ", preprev, prev);
+	printf("%lu, %lu, ", preprev, prev);
 
 	for (i = 2; i <= 98; i++)
 	{
 		sum = prev + preprev;
 		if (i != 98)
-			printf("%Lf, ", sum);
+			printf("%lu, ", sum);
 		else
-			printf("%Lf", sum);
+			printf("%lu", sum);
 
 		preprev = prev;
 		prev = sum;
