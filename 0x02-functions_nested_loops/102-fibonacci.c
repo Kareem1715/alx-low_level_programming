@@ -15,7 +15,7 @@ int main(void)
 	prev = 2, preprev = 1;
 	printf("%ld, %ld, ", preprev, prev);
 
-	for (i = 0; i < 50; i++)
+	for (i = 2; i < 50; i++)
 	{
 		sum = prev + preprev;
 		printf("%ld, ", sum);
