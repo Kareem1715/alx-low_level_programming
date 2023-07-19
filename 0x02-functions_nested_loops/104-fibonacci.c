@@ -28,7 +28,7 @@ int main(void)
 			fibo2_nd = sum3;
 			fibo1 = fibo2;
 			fibo2 = sum2;
-			printf("%lu%lu", fibo2_nd, fibo2);
+			printf("%lu%010lu", fibo2_nd, fibo2);
 		}
 		else
 		{
