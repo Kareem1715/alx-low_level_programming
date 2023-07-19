@@ -22,12 +22,12 @@ int main(void)
 		if (i != 98)
 			printf("%lu, ", sum);
 
-		else if (sum > 1000000000000000000)
+		else if (sum > 100000000000000000)
 		{
 			printf("%lu", sum / 10000000000);
 			printf("%lu, ", sum % 1000000000);
 		}
-		
+
 		else
 			printf("%lu", sum);
 
