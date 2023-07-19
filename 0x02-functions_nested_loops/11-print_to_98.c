@@ -35,7 +35,7 @@ void print_to_98(int n)
 			if (j == 98)
 				continue;
 			printf(", ");
-		}		
+		}
 		printf("\n");
 	}
 }
