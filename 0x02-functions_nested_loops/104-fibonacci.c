@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	long i, prev, preprev, sum = 0;
+     long double i, prev, preprev, sum = 0;
 
 	prev = 2, preprev = 1;
 	printf("%Lf, %Lf, ", preprev, prev);
