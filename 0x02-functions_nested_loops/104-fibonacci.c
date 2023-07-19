@@ -28,7 +28,7 @@ int main(void)
 		sum = prev + preprev;
 		if (i != 98)
 			printf("%lu, ", sum);
-		else
+		else if (sum < 1000000000000000000)
 			printf("%lu", sum);
 
 		preprev = prev;
