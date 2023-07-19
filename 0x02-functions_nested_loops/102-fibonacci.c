@@ -22,6 +22,7 @@ int main(void)
 			printf("%ld, ", sum);
 		else
 			printf("%ld", sum);
+
 		preprev = prev;
 		prev = sum;
 	}
