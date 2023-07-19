@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-     long unsigned int i, prev, preprev, sum = 0;
+	 long unsigned int i, prev, preprev, sum = 0;
 
 	prev = 2, preprev = 1;
 	printf("%lu, %lu, ", preprev, prev);
