@@ -12,9 +12,9 @@ int main(void)
 {
 	int i;
 	unsigned long fibo1, fibo2, sum,
-	fibo1_nd, fibo2_nd, sum1, sum2, sum3;
+	fibo1_nd = 0, fibo2_nd = 0, sum1, sum2, sum3;
 
-	fibo1 = 1, fibo2 = 2; 
+	fibo1 = 1, fibo2 = 2;
 	printf("%lu, %lu, ", fibo1, fibo2);
 
 	for (i = 2; i < 92; i++)
