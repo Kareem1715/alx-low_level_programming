@@ -28,14 +28,14 @@ int main(void)
 			fibo2_nd = sum3;
 			fibo1 = fibo2;
 			fibo2 = sum2;
-			printf("%lu%lu", fibo2_nd, fibo2);			
+			printf("%lu%lu", fibo2_nd, fibo2);		
 		}
 		else
 		{
 			sum = fibo1 + fibo2;
-			printf("%lu, ", sum);
+			printf("%lu", sum);
 			fibo1 = fibo2;
-			fibo2 = sum;			
+			fibo2 = sum;
 		}
 		if (i != 97)
 			printf(", ");
