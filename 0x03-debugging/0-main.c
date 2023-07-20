@@ -1,5 +1,5 @@
-#include "main.h"
-
+#include <stdio.h>
+void positive_or_negative(int n);
 
 /**
  * main - Entery point
@@ -11,5 +11,6 @@
 int main(void)
 {
 	positive_or_negative(0);
+
 	return (0);
 }
