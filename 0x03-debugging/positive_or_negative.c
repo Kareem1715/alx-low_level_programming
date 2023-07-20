@@ -1,20 +1,16 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
+ *
+ * @n: parameter of fuction
  *
  * Return: Always 0 (Success)
  *
  * Description: positive or negative or zero
  */
-int positive_or_negative(void)
+void positive_or_negative(int n)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
 		printf("%d is positive\n", n);
@@ -23,5 +19,4 @@ int positive_or_negative(void)
 	else
 		printf("%d is zero\n", n);
 
-	return (0);
 }
