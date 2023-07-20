@@ -1,28 +1,30 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  *
- * Description: prime factors 
+ * Description: prime factors
  */
 int main(void)
 {
-    unsigned long int i, num = 612852475143;
+	long int i, largest, num = 612852475143;
 
-    while(num % 2 == 0)
-    {
-        num = num / 2;
-        printf("%d ", 2);
-    }
+	while(num % 2 == 0)
+		num = num / 2;
 
-    for (i = 2; i < num; i++)
-    {
-        if (num % i == 0)
-        printf("%lu ", i);
-    }
+	for (i = 3; i <= sqrt(num); i+=2)
+	{
+		while (num % i == 0)
+		{
+			num = num / i;
+			largest = num;
+		}
 
-    printf("\n");
+	}
+
+	printf("%ld\n", largest);
 	return (0);
 }
