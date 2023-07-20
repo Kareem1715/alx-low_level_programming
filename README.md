@@ -1,1 +1,1 @@
-This repo for c programming language
+This repo for C programming language.
