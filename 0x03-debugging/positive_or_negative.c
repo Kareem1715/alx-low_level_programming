@@ -9,8 +9,9 @@
  *
  * Description: positive or negative or zero
  */
-int positive_or_negative(int n)
+int positive_or_negative(void)
 {
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
