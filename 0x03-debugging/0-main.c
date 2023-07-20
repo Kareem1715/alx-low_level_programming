@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void positive_or_negative(int i);
 /**
  * main - test the function Positive_or_negative
@@ -13,6 +12,5 @@ void positive_or_negative(int i);
 int main(void)
 {
 	positive_or_negative(0);
-
 	return (0);
 }
