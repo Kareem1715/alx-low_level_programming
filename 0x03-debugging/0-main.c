@@ -2,7 +2,7 @@
 
 void positive_or_negative(int i);
 /**
- * test - test the function Positive_or_negative
+ * main - test the function Positive_or_negative
  *
  * @n: parameter of fuction
  *
@@ -12,7 +12,7 @@ void positive_or_negative(int i);
  */
 int main(void)
 {
-    positive_or_negative(0);
+	positive_or_negative(0);
 
-    return (0);
+	return (0);
 }
