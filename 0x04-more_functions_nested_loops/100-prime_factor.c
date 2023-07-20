@@ -12,10 +12,10 @@ int main(void)
 {
 	long int i, largest, num = 612852475143;
 
-	while(num % 2 == 0)
+	while (num % 2 == 0)
 		num = num / 2;
 
-	for (i = 3; i <= sqrt(num); i+=2)
+	for (i = 3; i <= sqrt(num); i += 2)
 	{
 		while (num % i == 0)
 		{
