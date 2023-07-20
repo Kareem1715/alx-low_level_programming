@@ -2,7 +2,7 @@
 
 
 /**
- * print_square - Entery point
+ * print_triangle - Entery point
  *
  * @size:parameter recieved by calling function.
  *
@@ -13,6 +13,7 @@
 void print_triangle(int size)
 {
 	int i, j, k;
+
 	if (size > 0)
 	{
 		for (i = 0; i < size; i++)
