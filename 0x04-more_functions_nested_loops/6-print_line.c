@@ -4,6 +4,8 @@
 /**
  * print_line - Entery point
  *
+ * @n:parameter recieved by calling function.
+ *
  * Description: print lines ____
  *
  * Return: Always 0.
