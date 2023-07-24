@@ -18,7 +18,7 @@ void rev_string(char *s)
 		length++;
 
 	/* we need the half length of string to swap */
-	for (i = 0; i <= length / 2; i++)
+	for (i = 0; i < length / 2; i++)
 	{   /* swap the first element with last element */
 		tmp = s[i]; /* store the first element in tmp */
 		s[i] = s[length - i - 1];
