@@ -8,7 +8,7 @@
  *
  * Description: copy a string.
  *
- * Return: nothing it is a void function.
+ * Return: dest pointer.
  */
 char *_strcpy(char *dest, char *src)
 {
