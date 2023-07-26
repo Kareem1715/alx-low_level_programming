@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - Entery point
+ * _strncat - Entery point
  *
  * @dest: char pointer parameter.
  * @src: char pointer parameter.
  *
- * Description: concatenates two strings
+ * Description: concatenates two strings with n.
  *
- * Return: string
+ * Return: poniter of string
  */
 char *_strncat(char *dest, char *src, int n)
 {
