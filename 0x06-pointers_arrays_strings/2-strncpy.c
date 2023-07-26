@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * _strncat - Entery point
+ * _strncpy - Entery point
  *
  * @dest: char pointer parameter.
  * @src: char pointer parameter.
+ * @n: integar parameter.
  *
  * Description: concatenates two strings with n.
  *
@@ -12,14 +13,14 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-    int dest_len, i;
+	int dest_len, i;
 
-    dest_len = 0;
-    while (dest[dest_len] != '\0')
-        dest_len++;
+	dest_len = 0;
+	while (dest[dest_len] != '\0')
+		dest_len++;
 
-    for (i = 0; i < n && src[i] != '\0'; i++)
-        dest[i] = src[i];
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
 
-    return (dest);
+	return (dest);
 }
