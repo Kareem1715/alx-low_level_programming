@@ -6,9 +6,9 @@
  * @dest: char pointer parameter.
  * @src: char pointer parameter.
  *
- * Description: print a string.
+ * Description: concatenates two strings
  *
- * Return: nothing it is a void function.
+ * Return: string
  */
 char *_strcat(char *dest, char *src)
 {
