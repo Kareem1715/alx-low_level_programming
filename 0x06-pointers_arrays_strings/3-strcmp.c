@@ -29,7 +29,7 @@ int _strcmp(char *s1, char *s2)
 		lens1 = tmp;
 	}
 
-	for (i = 0; i <= lens1; i++)
+	for (i = 0; i <= lens2; i++)
 	{
 		if (s1[i] != s2[i])
 			strcm = s1[0] - s2[0];
