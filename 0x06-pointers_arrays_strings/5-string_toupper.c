@@ -3,6 +3,8 @@
 /**
  * string_toupper - Entery point.
  *
+ * @s: string parameter.
+ *
  * Description: uppercase string.
  *
  * Return: string pointer.
