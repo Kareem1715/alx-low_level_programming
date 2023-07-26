@@ -14,16 +14,14 @@ int _strcmp(char *s1, char *s2)
 {
 	int i, strcm;
 
-
-	for (i = 0;(s1[i] != '\0' || s2[i] != '\0'); i++)
+	strcm = 0;
+	for (i = 0;(s1[i] != '\0'); i++)
 	{
 		if (s1[i] != s2[i])
 		{
 			strcm = s1[0] - s2[0];
 			break;
 		}
-		else
-			strcm = 0;
 	}
 	return (strcm);
 }
