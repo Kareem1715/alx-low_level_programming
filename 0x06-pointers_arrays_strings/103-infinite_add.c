@@ -21,7 +21,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	while (n2[n2len] != '\0')
 		n2len++;
 
-	if (n1len > n2len) /* Get the maximum length in string */
+	if (n1len > n2len) /* Get the longest string in n1 & n2 */
 		len = n1len;
 	else
 		len = n2len;
