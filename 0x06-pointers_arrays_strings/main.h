@@ -14,4 +14,6 @@ char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
+void print_hexa(char *b, int byte, int last);
+void print_char(char *b, int byte, int last);
 #endif
