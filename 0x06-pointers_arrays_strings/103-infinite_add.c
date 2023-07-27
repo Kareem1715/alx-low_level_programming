@@ -40,7 +40,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (--n2len >= 0)
 			n2digit = n2[n2len] - '0';
 		else
-			n2digit = 0;					/* Summation of n1 and n2 */
+			n2digit = 0;			/* Summation of n1 and n2 */
 		r[i] = (n1digit + n2digit + carry) % 10 + '0'; /* And convert r[] to string*/
 		carry = (n1digit + n2digit + carry) / 10; /* Get the carry of addation */
 	}
