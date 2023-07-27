@@ -51,7 +51,7 @@ void print_hexa(char *b, int byte, int last)
 	while (i < 10)
 	{
 		if (i < last)
-			printf("02x", *(b + byte + i));
+			printf("%02x", *(b + byte + i));
 		else
 			printf("  ");
 		if (i % 2 != 0)
