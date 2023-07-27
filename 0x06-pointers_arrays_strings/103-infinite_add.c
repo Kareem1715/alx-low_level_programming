@@ -32,8 +32,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	carry = 0;
 	for (i = len - 1; i >= 0; i--)
 	{
-		n1len--;
-		n2len--;
+		n1len--, n2len--;
 		if (n1len >= 0)
 			n1digit = n1[n1len] - '0';
 		else
@@ -50,11 +49,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[len + 1] = '\0';
 		if (len + 2 > size_r)
 			return (0);
-		while (len >= 0)
-		{
+		for (; len >= 0; len--)
 			r[len + 1] = r[len];
-			len--;
-		}
 		r[0] = carry + '0';
 	}
 	return (r);
