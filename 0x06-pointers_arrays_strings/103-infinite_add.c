@@ -17,9 +17,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i, n1len = 0, n2len = 0, len, n1digit, n2digit, carry = 0;
 
 	while (n1[n1len] != '\0')
-	n1len++;
+		n1len++;
 	while (n2[n2len] != '\0')
-	n2len++;
+		n2len++;
 
 	if (n1len > n2len)
 		len = n1len;
