@@ -5,7 +5,7 @@
  *
  * @s: string parameter.
  *
- * Description: Capitalize all word of string.
+ * Description: Capitalize each word of string.
  *
  * Return: string pointer.
  */
