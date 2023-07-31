@@ -1,17 +1,23 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_buffer - Entery point.
+ * _memset - Entery point.
  *
- * @b: string parameter.
- * @size: integar parameter.
+ * @s: string parameter.
+ * @b: char parameter.
+ * @n:  unsigned integar parameter.
  *
- * Description: print buffer.
+ * Description: fills memory with a constant byte.
  *
- * Return: string poniter (r).
+ * Return: string poniter.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-    
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = b;
+
+
+	return (s);
 }
