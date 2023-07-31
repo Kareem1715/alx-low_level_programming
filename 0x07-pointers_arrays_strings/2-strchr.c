@@ -1,22 +1,22 @@
 #include "main.h"
 
 /**
- * _memcpy - Entery point.
+ * _strchr - Entery point.
  *
- * @dest: string parameter.
- * @src: string parameter.
- * @n:  unsigned integar parameter.
+ * @s: string parameter.
+ * @c: character parameter.
  *
  * Description: copies memory area.
  *
- * Return: string poniter.
+ * Return: locates a character in a string.
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	int i;
 
-	for (i = 0; i < n; i++)
-		dest[i] = src[i];
+	for (i = 0; ; i++)
+		if (s[i] == c)
+			return (s + i);
 
-	return (dest);
+	return (0);
 }
