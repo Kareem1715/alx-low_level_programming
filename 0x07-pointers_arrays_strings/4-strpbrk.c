@@ -19,5 +19,5 @@ char *_strpbrk(char *s, char *accept)
 			if (s[i] == accept[j])
 				return (s + i); /* Make s point to s + i = l to end of string */
 
-	return (0);
+	return ('\0');
 }
