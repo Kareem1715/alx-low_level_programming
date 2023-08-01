@@ -6,9 +6,9 @@
  * @s: string parameter.
  * @c: character parameter.
  *
- * Description: copies memory area.
+ * Description: locates a character in a string.
  *
- * Return: locates a character in a string.
+ * Return: pointer .
  */
 char *_strchr(char *s, char c)
 {
