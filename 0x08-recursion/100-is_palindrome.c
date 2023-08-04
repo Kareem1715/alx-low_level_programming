@@ -34,7 +34,7 @@ int lengthOfString(char *s)
 }
 
 /**
- * palin - prime number by recursion.
+ * palin - Prime number by recursion.
  *
  * @str: string parameter you need to check it is palindrome or not.
  * @len: integar parameter length of string.
