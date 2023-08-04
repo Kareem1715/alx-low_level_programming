@@ -17,12 +17,31 @@ int main(int argc, char *argv[])
 	if (argc > 2)
 	{
 		for (i = 1; i < argc; i++)
-			result *= atoi(argv[i]);
+			result *= string_to_int(argv[i]);
 
-	    printf("%d\n", result);
+		printf("%d\n", result);
 	}
 	else
 		printf("Error\n");
 
 	return (0);
+}
+
+/**
+ * string_to_int - Entry point
+ *
+ * @str: string that you want to convert to integar.
+ *
+ * Description: convert the string to integar
+ *
+ * Return: the integar number.
+ */
+int string_to_int(char *str)
+{
+	int i, number = 0;
+
+	for (i = 0; str[i] != '\0'; i++)
+		number = number * 10 + str[i] - '0';
+
+	return (number);
 }
