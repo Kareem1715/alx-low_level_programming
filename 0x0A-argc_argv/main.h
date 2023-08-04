@@ -2,6 +2,6 @@
 #define MAIN_H
 
 #include <stdio.h>
-int string_to_int(char *str);
+int atoi(const char *string);
 
 #endif
