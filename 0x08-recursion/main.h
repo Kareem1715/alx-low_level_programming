@@ -14,6 +14,7 @@ int root(int num, int j);
 int is_prime_number(int n);
 int prime(int num, int j);
 
+
 int is_palindrome(char *s);
 int palin(char *str, int len, int j);
 int lengthOfString(char *s);
