@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, result = 1;
+	int i = 0, result = 1;
 
 	if (argc > 2)
 	{
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
  */
 int string_to_int(char *str)
 {
-	int i, number = 0;
+	int i = 0, number = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 		number = number * 10 + str[i] - '0';
