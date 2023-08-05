@@ -2,6 +2,7 @@
 #define MAIN_H
 
 #include <stdio.h>
+
 int atoi(const char *string);
 
 #endif
