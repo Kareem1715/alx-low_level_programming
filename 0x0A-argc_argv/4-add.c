@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	char *flag;
 
-	while (-- argc)
+	while (--argc)
 	{
 		for (flag = argv[argc]; *flag; flag++)
-			if (*flag < '0' && *flag > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
+			if (*flag < '0' || *flag > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
