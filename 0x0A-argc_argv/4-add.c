@@ -12,26 +12,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int sum = 0;
+	char *flag;
 
-	if (argc < 2)
+	while (-- argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; argv[i]; i++)
-	{
-		if ((*(argv[i]) >= '0' && *(argv[i]) <= '9'))
-			sum += atoi(argv[i]);
-
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-
+		for (flag = argv[argc]; *flag; flag++)
+			if (*flag < '0' && *flag > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
-
 	return (0);
 }
