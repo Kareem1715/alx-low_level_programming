@@ -1,12 +1,27 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * reset_to_98 - Entery point
+ * create_array - Entery point
  *
- * @n:parameter recieved by calling function.
+ * @size: size of array.
+ * @c: charachter that you want to put in array.
  *
  * Description: update the value of n.
  *
- * Return: Always 0.
+ * Return: pointer of array.
  */
-char *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c)
+{
+	char *arr;
+	unsigned int i;
+
+	if (size == 0)
+		return ('\0');
+	arr = malloc(sizeof(char) * size);
+	for (i = 0; i < size; i++)
+		arr[i] = c;
+
+	return (arr);
+
+}
