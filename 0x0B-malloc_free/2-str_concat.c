@@ -16,6 +16,12 @@ char *str_concat(char *s1, char *s2)
 	int i, s1ize = 0, s2ize = 0, Total = 0;
 	char *concat;
 
+	if (s1 == NULL)
+		s1 = '\0';
+	
+	if (s2 == NULL)
+		s2 = '\0';
+
 	while (s1[s1ize] != '\0')
 		s1ize++;
 	while (s2[s2ize] != '\0')
@@ -26,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	if (concat == 0)
 		return (NULL);
 
-	for (i = 0; i <= s1ize; i++)
+	for (i = 0; i < s1ize; i++)
 		concat[i] = s1[i];
 
 	for (i = s1ize; i < Total; i++)
