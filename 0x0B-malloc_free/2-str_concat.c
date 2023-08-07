@@ -32,6 +32,8 @@ char *str_concat(char *s1, char *s2)
 	for (i = s1ize; i < Total; i++)
 		concat[i] = s2[i - s1ize];
 
+	concat[Total] = '\0';
+
 	return (concat);
 
 }
