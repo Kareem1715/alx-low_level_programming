@@ -22,7 +22,10 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 		arr[i] = c;
 
-	return (arr);
+	if (arr != '\0')
+		return (arr);
+	else
+		return ('\0');
 	free(arr);
 
 }
