@@ -1,11 +1,32 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * reset_to_98 - Entery point
+ * _strdup - Entery point
  *
- * @n:parameter recieved by calling function.
+ * @str: string that we want to copy it.
  *
- * Description: update the value of n.
+ * Description: copy of string allocated in space memory.
  *
- * Return: Always 0.
+ * Return: The copied string with new size.
  */
+char *_strdup(char *str)
+{
+	int i, len = 0;
+	char *s;
+
+	if (str == NULL)
+		return (NULL);
+
+	while (str[len] != '\0')
+		len++; /* len is the size of string */
+
+	s = malloc(sizeof(char) * len);
+	if (s == NULL)
+		return (NULL);
+
+	for (i = 0; s[i] < len; i++)
+		s[i] = str[i];
+
+	return (s);
+}
