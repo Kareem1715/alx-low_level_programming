@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	while (str[len] != '\0')
 		len++; /* len is the size of string */
 
-	s = malloc(sizeof(char) * len);
+	s = malloc(sizeof(char) * len + 1); /* I add +1 for null tremination '\0' */
 	if (s == NULL)
 		return (NULL);
 
