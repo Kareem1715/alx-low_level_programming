@@ -29,10 +29,9 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < s1ize; i++)
 		concat[i] = s1[i];
 
-	for (i = s1ize; i < Total; i++)
+	for (i = s1ize; i < Total - 1; i++)
 		concat[i] = s2[i - s1ize];
 
-	concat[Total] = '\0';
 
 	return (concat);
 
