@@ -23,8 +23,8 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-	length += size_of_string(av[i]);
-	length++;	
+		length += size_of_string(av[i]);
+		length++;	
 	}
 
 	result = malloc(sizeof(char) * (length + 1));
