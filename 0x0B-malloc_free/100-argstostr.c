@@ -21,24 +21,24 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++) /* add +1 for '\n' */
 		length += size_of_string(av[i]) + 1;
 
-	result = malloc(sizeof(char) * length);
+	result = malloc(sizeof(char) * length + 1);
+	/* add +1 for null termination '\0' at the end of string */
 	if (result == NULL)
-		return (NULL);
+		return (NULL);/* if there is no space for malloc */
 
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			result[k] = av[i][j];
+			result[k] = av[i][j]; /* Add the characters to result */
 			k++;
 		}
-		result[k] = '\n';
+		result[k] = '\n'; /* Add the new line and the end of each string */
 		k++;
 	}
-
 
 	return (result);
 
