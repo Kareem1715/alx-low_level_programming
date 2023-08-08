@@ -1,11 +1,22 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
- * reset_to_98 - Entery point
+ * free_grid - Entery point
  *
- * @n:parameter recieved by calling function.
+ * @grid: the matrix in previous task.
+ * @height: rows of matirx.
  *
- * Description: update the value of n.
+ * Description: frees a 2 dimensional grid previously created.
  *
- * Return: Always 0.
+ * Return: Nothing (void function).
  */
+void free_grid(int **grid, int height)
+{
+	int i;
+
+	for (i = 0; i < height; i++)
+		free(grid[i]);
+
+	free(grid);
+}
