@@ -23,7 +23,7 @@ char **strtow(char *str)
 
 	while (str[c] != '\0')
 	{
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] != '\0'))
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			count++; /* length of charachers in words (only words not spaces) */
 		c++;
 	}
@@ -38,7 +38,7 @@ char **strtow(char *str)
 		len++; /* length of all string with spaces */
 	for (i = 0; i < len; i++)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == 0))
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			end = i + 1;
 			words[mo] = move_words(str, begin, end);
