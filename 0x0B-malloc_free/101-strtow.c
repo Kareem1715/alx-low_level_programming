@@ -23,7 +23,7 @@ char **strtow(char *str)
 
 	while (str[c] != '\0')
 	{
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] != '\0'))
 			count++; /* length of charachers in words (only words not spaces) */
 		c++;
 	}
