@@ -20,10 +20,8 @@ char **strtow(char *str)
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
-
-	while (str[len] != '\0')
-		len++; /* length of all string with spaces */
-	while (c < len)
+	
+	while (str[c] != '\0')
 	{
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] != '\0'))
 			count++; /* length of charachers in words (only words not spaces) */
@@ -36,6 +34,8 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
+	while (str[len] != '\0')
+		len++; /* length of all string with spaces */
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
