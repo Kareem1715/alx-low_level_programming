@@ -18,6 +18,9 @@ char **strtow(char *str)
 	int i, c = 0, count = 0, len = 0,
 	begin = 0, end = 0, mo = 0, fr = 0;
 
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+
 	while (str[c] != '\0')
 	{
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] != '\0'))
