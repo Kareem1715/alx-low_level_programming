@@ -19,7 +19,7 @@ char **strtow(char *str)
 	begin = 0, end = 0, mo = 0, fr = 0;
 
 	if (str == NULL || str[0] == '\0')
-		return (0);
+		return (NULL);
 
 	while (str[c] != '\0')
 	{
