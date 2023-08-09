@@ -15,16 +15,15 @@ char *move_words(char *s, int be, int en);
 char **strtow(char *str)
 {
 	char **words;
-	int i, c = 0, count = 0, len = 0,
-	begin = 0, end, mo = 0, fr = 0;
+	int c = 0, count = 0, len = 0, i,
+	begin = 0, end = 0, mo = 0, fr = 0;
 
 	if (str == NULL || str[0] == '\0')
-		return (NULL);
-	while (str[len] != '\0')
-		len++; /* length of all string with spaces */
-	while (c < len)
+		return (0);
+
+	while (str[c] != '\0')
 	{
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] != '\0'))
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			count++; /* length of charachers in words (only words not spaces) */
 		c++;
 	}
@@ -35,10 +34,11 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-
+	while (str[len] != '\0')
+		len++; /* length of all string with spaces */
 	for (i = 0; i < len; i++)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == 0))
 		{
 			end = i + 1;
 			words[mo] = move_words(str, begin, end);
