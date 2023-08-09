@@ -42,11 +42,11 @@ char **strtow(char *str)
 		{
 			end = i + 1; /* i is the last char in word & add +1 for '\0' */
 			words[mo] = move_words(str, begin, end); /* begin = first indix of word */
-			if (words[mo] == NULL)		/* begin depend on else condition */
+			if (words[mo] == NULL)			/* begin depends on else condition */
 			{
 				for (fr = 0; fr < count; fr++)
-					free(words[fr]); /* Free each cahr in word */
-				free(words); /* Free the whole word */
+					free(words[fr]); /* Free each word in string */
+				free(words); /* Free the whole string */
 				return (NULL);
 			}
 			mo++; /* Move the new word */
