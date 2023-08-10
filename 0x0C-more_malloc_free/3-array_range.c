@@ -18,7 +18,7 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	/* (max - min + 1) --> number of elements and add 1 for null termination */
+	/* (max - min + 1) --> number of elements */
 	arry = malloc(sizeof(int) * (max - min + 1));
 	if (!arry)
 		return (NULL);
