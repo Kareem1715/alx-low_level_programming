@@ -2,21 +2,20 @@
 #include <stdlib.h>
 
 /**
- * create_array - Entery point
+ * malloc_checked - Entery point
  *
- * @size: size of array.
- * @c: charachter that you want to put in array.
+ * @b: sizeof(given) * size
  *
- * Description: update the value of n.
+ * Description: This function allocates memory using malloc.
  *
- * Return: pointer of array.
+ * Return: void pointer of check.
  */
 void *malloc_checked(unsigned int b)
 {
+	void *check = malloc(b);
 
-    malloc(b);
-    if (malloc(b) == NULL)
-        exit(98);
-  
-    return (malloc(b));
+	if (check == NULL) /* allocation falis */
+		exit(98); /* normal process termination with a status value of 98 */
+
+	return (check);
 }
