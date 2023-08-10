@@ -13,9 +13,13 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *cal = calloc(nmemb, size);
+	void *cal;
 
-	if (!cal || !nmemb || !size)
+	if (!nmemb || !size)
+		return (NULL);
+
+	cal = calloc(nmemb, size);
+	if (!cal)
 		return (NULL);
 
 	return (cal);
