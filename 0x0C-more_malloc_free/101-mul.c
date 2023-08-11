@@ -14,7 +14,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	char *pnter;
+	int num1, num2, mul, j, i;
 
 	if (argc != 3)
 	{
@@ -22,10 +23,38 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
 
-	printf("%d\n", num1 * num2);
+	for (i = 1; i < argc; i++)
+	{
+		pnter = argv[i];
+		for (j = 0; pnter[j] != '\0'; j++)
+		{
+			if (pnter[j] < '0' || pnter[j] > '9')
+			{
+				printf("Error\n");
+				exit(98);
+			}
+		}
+	}
+
+	if (atoi(argv[1]))
+		num1 = atoi(argv[1]);
+	else
+	{
+		printf("Error\n");
+		exit(98);		
+	}
+
+	if (atoi(argv[2]))
+		num2 = atoi(argv[1]);
+	else
+	{
+		printf("Error\n");
+		exit(98);		
+	}
+	mul  = num1 * num2;
+
+	printf("%d\n", mul);
 	return (0);
 
 }
