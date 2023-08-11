@@ -15,7 +15,8 @@
 int main(int argc, char *argv[])
 {
 	char *pnter;
-	int num1, num2, mul, j, i;
+	int i, j;
+	unsigned long mul, num1, num2;
 
 	if (argc != 3)
 	{
@@ -37,24 +38,24 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	if (atoi(argv[1]))
-		num1 = atoi(argv[1]);
+	if (atol(argv[1]))
+		num1 = atol(argv[1]);
 	else
 	{
 		printf("Error\n");
-		exit(98);		
+		exit(98);
 	}
 
-	if (atoi(argv[2]))
-		num2 = atoi(argv[1]);
+	if (atol(argv[2]))
+		num2 = atol(argv[2]);
 	else
 	{
 		printf("Error\n");
-		exit(98);		
+		exit(98);
 	}
 	mul  = num1 * num2;
 
-	printf("%d\n", mul);
+	printf("%lu\n", mul);
 	return (0);
 
 }
