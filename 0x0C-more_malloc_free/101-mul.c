@@ -36,7 +36,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
+
+			
 
 	for (i = length1 - 1; i >= 0; i--) 	  
 	{									   /* 12345 */
