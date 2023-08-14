@@ -1,6 +1,4 @@
-#ifndef DOG_H
-#define DOG_H
-
+#include <stdio.h>
 
 /**
  * struct: describe the dog
@@ -18,4 +16,12 @@ struct dog
     char *owner;
 };
 
-#endif
+/**
+ * main - Entry point fuction
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
