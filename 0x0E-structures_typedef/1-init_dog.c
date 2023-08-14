@@ -3,7 +3,7 @@
 /**
  * struct dog - describe the dog
  * 
- * @d: my_dog variable.
+ * @d: dog variable.
  * @name: dog name.
  * @age: dog age.
  * @owner: owner of the dog.
@@ -13,7 +13,7 @@
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 
-    if (d != 0)
+    if (d)
     {
         d -> name = name;
         d -> owner = owner;
