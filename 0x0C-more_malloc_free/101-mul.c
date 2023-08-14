@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
 	}
 
 
-			
 
-	for (i = length1 - 1; i >= 0; i--) 	  
+
+	for (i = length1 - 1; i >= 0; i--)
 	{									   /* 12345 */
 		for (j = length2 - 1; j >= 0; j++) /* 67891 */
 		{
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 			mul[i + j] += num1 * num2;
 			mul[i + j - 1] += mul[i + j] / 10;
-			mul[i + j] = mul[i + j] % 10; 
+			mul[i + j] = mul[i + j] % 10;
 		}
 	}
 	i = 0;
@@ -60,10 +60,10 @@ int main(int argc, char *argv[])
 
 	if (i == length)
 		printf('0');
-	
+
 	for (; i < length; i++)
 		printf("%d", mul[i] + '0');
-		
+
 	printf("\n");
 	free(mul);
 
@@ -77,7 +77,7 @@ int lengthOfString(char *s)
 
 	while (s[len] != '\0')
 		len++;
-	
+
 	return (len);
 }
 
@@ -90,6 +90,6 @@ int isDigit(char *s)
 		if (s[i] < '0' || s[i] > '9')
 			return (0);
 	}
-	
+
 	return (1);
 }
