@@ -1,9 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
 
-int strlength(char *str);
-char *strcopy(char *old, char *new);
-
 /**
  * new_dog - new dog function with struct.
  *
