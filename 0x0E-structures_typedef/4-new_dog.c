@@ -17,31 +17,31 @@ char *strcopy(char *old, char *new);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dog = malloc(sizeof(dog_t));
+	dog_t *newDog = malloc(sizeof(dog_t));
 
-	if (dog == NULL)
+	if (newDog == NULL)
 		return (NULL);
 
-	dog->name = malloc(sizeof(char) * (strlength(name) + 1));
-	if (dog->name == NULL)
+	newDog->name = malloc(sizeof(char) * (strlength(name) + 1));
+	if (newDog->name == NULL)
 	{
-		free(dog);
+		free(newDog);
 		return (NULL);
 	}
 
-	dog->owner = malloc(sizeof(char) * (strlength(owner) + 1));
-	if (dog->owner == NULL)
+	newDog->owner = malloc(sizeof(char) * (strlength(owner) + 1));
+	if (newDog->owner == NULL)
 	{
-		free(dog->name);
-		free(dog);
+		free(newDog->name);
+		free(newDog);
 		return (NULL);
 	}
 
-	strcopy(dog->name, name);
-	dog->age = age;
-	strcopy(dog->owner, owner);
+	strcopy(newDog->name, name);
+	newDog->age = age;
+	strcopy(newDog->owner, owner);
 
-	return (dog);
+	return (newDog);
 }
 
 /**
