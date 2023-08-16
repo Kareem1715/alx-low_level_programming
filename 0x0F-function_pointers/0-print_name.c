@@ -13,8 +13,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == 0)
-		return;
+	if (name == 0 || f == 0) /* Check if the passed name is exist */
+		return;	/* and check if the second function (uppercase) i = 0 -> return */
 
 	(*f)(name);
 }
