@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*func_ptr)(int, int);
+	int (*func_ptr)(int, int), res;
 
 	if (argc != 4)
 	{
@@ -26,12 +26,13 @@ int main(int argc, char *argv[])
 		printf("Erorr\n");
 		exit(99);
 	}
-	if (((*argv[2]) == '/' || (*argv[2]) == '%') && (*argv[3]) == '0')
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
 	{
 		printf("Erorr\n");
 		exit(100);
 	}
 
-	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
+	res = func_ptr(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", res);
 	return (0);
 }
