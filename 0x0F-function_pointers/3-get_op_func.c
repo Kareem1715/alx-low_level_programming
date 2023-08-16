@@ -26,13 +26,13 @@ int (*get_op_func(char *s))(int, int)
 	int i;
 
 	i = 0;
-	while (ops[i].op) /* last return null if no operator passed the loop */
+	while (i < 5) /* last return null if no operator passed the loop */
 	{/* IF the operators equal to the sign passed */
 		if (strcmp(ops[i].op, s) == 0)
 			return (ops[i].f); /* Return the functoin of operatro */
 		i++;
 	}
 
-	return (NULL); /* if given non of the above operators */
+	return (0); /* if given non of the above operators */
 
 }
