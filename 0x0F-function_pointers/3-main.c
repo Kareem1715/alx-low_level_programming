@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	}
 
 	func_ptr = get_op_func(argv[2]);
-	if (func_ptr == NULL)
+	if (!func_ptr)
 	{
 		printf("Erorr\n");
 		exit(99);
