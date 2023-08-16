@@ -1,18 +1,17 @@
 #include "3-calc.h"
 
 /**
- * main - Entry point fuction
- *
- * @argc: number of arguments.
- * @argv: values of passed arguments.
- *
- * Description: This function performs simple operations.
+ * main - program that perfroms simple operations
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
  * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int (*func_ptr)(int, int);
+	int arg1, arg2, result;
+	char o;
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -20,18 +19,28 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	func_ptr = get_op_func(argv[2]);
-	if (func_ptr == NULL)
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
+
+	func = get_op_func(argv[2]);
+
+	if (!func)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		exit(99);
 	}
-	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
+
+	o = *argv[2];
+
+	if ((o == '/' || o == '%') && arg2 == 0)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
+	result = func(arg1, arg2);
+
+	printf("%d\n", result);
+
 	return (0);
 }
