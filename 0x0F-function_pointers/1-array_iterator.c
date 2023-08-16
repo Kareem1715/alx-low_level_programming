@@ -16,8 +16,8 @@ void array_iterator(int *array, int size, void (*action)(int))
 {
 	int i;
 
-	if (size == 0 || array == 0)
-		return;
+	if (size == 0 || array == 0 || action == 0)
+		return; /* IF array or action not exist -> return */
 	for (i = 0; i < size; i++)
 		action(array[i]);
 }
