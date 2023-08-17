@@ -1,0 +1,32 @@
+#include "variadic_functions.h"
+
+/**
+ * print_all - print numbers.
+ *
+ * @format: The format is a list of types of arguments passed to the function.
+ *
+ * Description: This function print anything char, int, float, string.
+ *
+ * Return: Nothing it is only print.
+ */
+void print_all(const char * const format, ...)
+{
+	va_list argsVar;
+	int i = 0, j = 0;
+	char *str, *separator = ""; /* At first print no separator */
+    char *fmt = "cifs";
+
+
+	va_start(argsVar, format);
+    while (format[i] != '\0')
+    {
+        while (fmt[i] != '\0')
+            if (format[i] == fmt[j])
+            {
+                printf("%")
+            }
+            j++;
+    }
+	printf("\n");
+	va_end(argsVar);
+}
