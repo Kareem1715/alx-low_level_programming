@@ -11,14 +11,17 @@
  */
 size_t print_list(const list_t *h)
 {
-	int n = 1; /* Strat from the first node head */
+	int n = 0; /* Strat from the first node head */
 
-	if (h->str == NULL || h->next == NULL) /* If str = null */
-		printf("[%d] %s\n", 0, "(nil)");
-	else
-		printf("[%d] %s\n", h->len, h->str);
+	while (h) /* If head not equal NULL */
+	{
+		if (h->str == NULL) /* If str is NULL */
+			printf("[%d] %s\n", 0, "(nil)");
+		else
+			printf("[%d] %s\n", h->len, h->str);
 
-	printf("[%d] %s\n", h->next->len, h->next->str);
-	n++;
+		h = h->next;
+		n++;
+	}
 	return (n);
 }
