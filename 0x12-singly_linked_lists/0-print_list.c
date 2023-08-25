@@ -11,7 +11,7 @@
  */
 size_t print_list(const list_t *h)
 {
-	int n = 0; /* Strat from the first node head */
+	size_t n = 0; /* Strat from the first node head */
 
 	while (h) /* If head not equal NULL */
 	{
@@ -20,7 +20,7 @@ size_t print_list(const list_t *h)
 		else
 			printf("[%d] %s\n", h->len, h->str);
 
-		h = h->next;
+		h = h->next; /* Make the head point to the next node */
 		n++;
 	}
 	return (n);
