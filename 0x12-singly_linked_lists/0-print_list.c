@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		printf("[%d] %s\n[%d] %s\n", 0, "(nil)", h->next->len, h->next->str);
 	else
 		printf("[%d] %s\n[%d] %s\n", h->len, h->str, h->next->len, h->next->str);
-	if (h->next) /* If h->nex node not equal null */
-		n++;
+
+	n++;
 	return (n);
 }
