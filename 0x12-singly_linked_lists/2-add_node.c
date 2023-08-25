@@ -20,10 +20,10 @@ list_t *add_node(list_t **head, const char *str)
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	new->len = strlen(str);
-	new->next = *head;
-	*head = new;
+	new->str = strdup(str); /* add string to new node */
+	new->len = strlen(str); /* add length to new node */
+	new->next = *head; /* attach new node with the node pointed by head */
+	*head = new; /* make the head point to new node */
 
 	return (*head);
 }
