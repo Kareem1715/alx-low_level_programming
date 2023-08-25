@@ -1,21 +1,23 @@
-list_t *add_node_end(list_t **head, const char *str)
-{
-	list_t *new, *last;
+#include "lists.h"
+#include <string.h>
+#include <stdio.h>
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-	new->str = strdup(str);
-	new->len = _strlen(str);
-	new->next = NULL;
-	if (*head == NULL)
-		*head = new;
-	else
+/**
+ * free_list - free a new list
+ *
+ * @head: The head node passed to functoin.
+ *
+ * Description: This function free the str in node
+ * and free the whole node until last node.
+ *
+ * Return: The address of the new element, or NULL if it failed.
+ */
+void free_list(list_t *head)
+{
+	while (head != NULL)
 	{
-		last = *head;
-		while (last->next)
-			last = last->next;
-		last->next = new;
+		free(head->str);
+		free(head);
+		head = head->next; /* Move to the next node to free */
 	}
-	return (new);
 }
