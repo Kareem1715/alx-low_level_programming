@@ -2,7 +2,7 @@
 
 
 /**
- * free_listint - free a new list
+ * free_listint2 - free a new list
  *
  * @head: The head node passed to functoin.
  *
