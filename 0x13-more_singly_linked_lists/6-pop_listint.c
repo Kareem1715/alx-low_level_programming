@@ -15,7 +15,7 @@ int pop_listint(listint_t **head)
 	listint_t *tmp;
 	int data;
 
-	if (head == NULL) /* IF linked list is empty */
+	if (head == NULL || *head == NULL) /* IF linked list is empty */
 		return (0);
 
 	tmp = *head; /* Copy the head node to tmp node */
