@@ -27,7 +27,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		if (i == idx - 1)
 		{   /* First attach the new node with the next node in list */
-			newNode->next = trav->next->next;
+			newNode->next = trav->next;
 			trav->next = newNode; /* Second make the trav ptr point to newNode */
 			return (newNode);
 		}
