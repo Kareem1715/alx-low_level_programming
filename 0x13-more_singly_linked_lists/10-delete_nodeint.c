@@ -31,6 +31,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{   /* trav pointer point to the previous node of dlet node point to */
 		trav = dlet;
 		dlet = dlet->next;
+		if (dlet == NULL)
+			return (-1);
 		index--;
 	}
 	/* Make the previous node of dlet (trav) point to the next node of dlet */
