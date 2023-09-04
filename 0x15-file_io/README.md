@@ -1,11 +1,11 @@
 # File input/ouput project
 In this project we have 4 mandatory tasks and 1 advanced task.
 
-0-read_textfile.c
-1-create_file.c
-2-append_text_to_file.c
-3-cp.c
-100-elf_header.c
+- 0-read_textfile.c
+- 1-create_file.c
+- 2-append_text_to_file.c
+- 3-cp.c
+- 100-elf_header.c
 
 # Resources
 - [File descriptors](https://en.wikipedia.org/wiki/File_descriptor)
