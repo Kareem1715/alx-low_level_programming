@@ -22,7 +22,8 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content) /* If text_content is exist */
-	{ /* Count number of char in the string until reach to '\0' */
+	{
+		/* Count number of char in the string until reach to '\0' */
 		while (text_content[sLen])
 			sLen++;
 
