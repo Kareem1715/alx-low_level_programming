@@ -27,14 +27,18 @@ int main(int ac, char **av)
 	if (file2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
-	while ((readBytes = read(file1, buff, 1024)) > 0)
-	{
+	do {
+
+		readBytes = read(file1, buff, 1024);
+		if (readBytes == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+
 		writeBytes = write(file2, buff, readBytes);
 		if (writeBytes == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	}
-	if (readBytes == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+
+	} while (readBytes > 0);
+
 
 	if (close(file1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1), exit(100);
