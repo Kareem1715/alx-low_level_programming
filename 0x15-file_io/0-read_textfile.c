@@ -13,14 +13,14 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fileDescr, sz;
+	ssize_t fileDescr, sz;
 	char *buff; 
 	
 	buff = malloc(sizeof(char) * letters);
 	if (buff == NULL || filename == NULL)
 		return (0);
 		
-	fileDescr = open("filename", O_RDONLY);
+	fileDescr = open(filename, O_RDONLY);
 	if (fileDescr < 0)
 	{
 		free(buff);
