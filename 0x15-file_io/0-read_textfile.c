@@ -22,16 +22,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fileDescr = open(filename, O_RDONLY); /* Open file in read only mode */
 	if (fileDescr < 0) /* IF open return -1 (error) */
-	{
 		return (0);
-	}
 
 	buffLen = read(fileDescr, buff, letters); /* Read the data in buffer */
 	buffLen = write(STDOUT_FILENO, buff, buffLen); /* print in standard ouput */
 	if (buffLen < 0) /* If it fails to read or write */
-	{
 		return (0);
-	}
 
 	close(fileDescr); /* Close the file */
 	return (buffLen);
