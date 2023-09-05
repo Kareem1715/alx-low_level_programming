@@ -1,4 +1,5 @@
 #include "main.h"
+#include <elf.h>
 
 /**
  * main - ELF
