@@ -37,7 +37,7 @@ int main(int ac, char **av)
 		writeBytes = write(file2, buff, readBytes);
 		if (writeBytes == -1) /* Write data from file1 to file2 */
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	} while (readBytes != 0);
+	} while (readBytes != 0); /* Read data while read does not return 0 */
 	/* read returns 0 when reach at end of the file (EOF) or no bytes were read */
 
 	if (close(file1) == -1) /* Close file1 and check for error */
