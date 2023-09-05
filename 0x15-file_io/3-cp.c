@@ -23,7 +23,7 @@ int main(int ac, char **av)
 	if (file1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[0]), exit(98);
 
-	file2 = open(av[2], O_RDONLY | O_CREAT | O_TRUNC, 0664);
+	file2 = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (file2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
