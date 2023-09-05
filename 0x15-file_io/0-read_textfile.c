@@ -28,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	buffLen = read(fileDescr, buff, letters);
-	buffLen = write(STDOUT_FILENO, buff, letters);
+	buffLen = write(STDOUT_FILENO, buff, buffLen);
 	if (buffLen < 0)
 	{
 		close(fileDescr);
