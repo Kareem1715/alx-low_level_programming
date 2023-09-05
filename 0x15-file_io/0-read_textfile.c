@@ -23,7 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fileDescr = open(filename, O_RDONLY); /* Open file in read only mode */
 	if (fileDescr < 0) /* IF open return -1 (error) */
 	{
-		free(buff);
 		return (0);
 	}
 
@@ -31,8 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffLen = write(STDOUT_FILENO, buff, buffLen); /* print in standard ouput */
 	if (buffLen < 0) /* If it fails to read or write */
 	{
-		close(fileDescr);
-		free(buff);
 		return (0);
 	}
 
