@@ -13,31 +13,30 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fileDescr, sz;
-	char *buff; 
-	
+	ssize_t fileDescr, buffLen;
+	char *buff;
+
 	buff = malloc(sizeof(char) * letters);
 	if (buff == NULL || filename == NULL)
 		return (0);
-		
+
 	fileDescr = open(filename, O_RDONLY);
 	if (fileDescr < 0)
 	{
 		free(buff);
-		return (0);		
+		return (0);
 	}
 
-
-	sz = read(fileDescr, buff, letters);
-	sz = write(STDOUT_FILENO, buff, sz);
-	if (sz < 0)
+	buffLen = read(fileDescr, buff, letters);
+	buffLen = write(STDOUT_FILENO, buff, letters);
+	if (buffLen < 0)
 	{
 		close(fileDescr);
 		free(buff);
-		return (0);		
+		return (0);
 	}
 
 	free(buff);
 	close(fileDescr);
-	return (sz);
+	return (buffLen);
 }
