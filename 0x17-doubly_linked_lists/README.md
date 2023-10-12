@@ -1,9 +1,9 @@
 # Doubly linked lists project
 In this project we will learn:
 
-[x]- What is a doubly linked list
+- [x] What is a doubly linked list
 
-[x]- How to use doubly linked lists
+- [x] How to use doubly linked lists
 
 # Data struecture :
 
