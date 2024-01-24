@@ -16,9 +16,13 @@ has a grid that is a list of list of integers:
 
 def island_perimeter(grid):
     """ This function returns the perimeter of the island described in grid"""
-    prmtr = 0
+    sqr = 0
+    innersqr = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if (grid[i][j] == 1):
-                prmtr += 1
-    return (prmtr+1)*2
+                sqr += 1
+                if(grid[i-1][j] == 1 or grid[i][j-1] == 1):
+                    innersqr += 1
+
+    return (sqr * 4) - (innersqr * 2)
