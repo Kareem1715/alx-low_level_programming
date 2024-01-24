@@ -22,7 +22,9 @@ def island_perimeter(grid):
         for j in range(len(grid[i])):
             if (grid[i][j] == 1):
                 sqr += 1
-                if ((i > 0 and grid[i-1][j] == 1) or (j > 0 and grid[i][j-1] == 1)):
+                if (i != 0 and grid[i-1][j] == 1):
+                    innersqr += 1
+                if (j != 0 and grid[i][j-1] == 1):
                     innersqr += 1
 
     return (sqr * 4) - (innersqr * 2)
