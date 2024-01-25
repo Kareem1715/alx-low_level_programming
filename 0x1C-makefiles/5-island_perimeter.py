@@ -20,31 +20,31 @@ def island_perimeter(grid):
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if (grid[i][j] == 1):
-            # Each square has 4 sides.
+                # Each square has 4 sides.
                 prmtr += 4
-    
+
                 # Remove the sides between each two squares to make a road
-                # There are 2 sides of each square in inner land not in ending squares
-                # open the road
-                #+-------------------+
-                #|   |   |   |   |   |
-                #+===================+
-                #|   | 1 |   |   |   |
-                #+===    ============+
-                #|   | 1 |   |   |   |
-                #+===    ============+
-                #|   | 1   1   1 |   |
-                #+===================+
-                #|   |   |   |   |   |
-                #+-------------------+
-                if (i != 0 and grid[i-1][j] == 1) or ((j != 0 and grid[i][j-1] == 1)):
-                # If there is a 1 in the upper square in the same colown
-                # remove 2 sides of inner squares to open the road.
-                    prmtr -=2
+                # There are 2 sides of each square in inner land
+                # not in ending squares to open the road.
+                # +-------------------+
+                # |   |   |   |   |   |
+                # +===================+
+                # |   | 1 |   |   |   |
+                # +===    ============+
+                # |   | 1 |   |   |   |
+                # +===    ============+
+                # |   | 1   1   1 |   |
+                # +===================+
+                # |   |   |   |   |   |
+                # +-------------------+
+                if (i != 0 and grid[i-1][j] == 1):
+                    # If there is a 1 in the upper square in the same colown
+                    # remove 2 sides of inner squares to open the road.
+                    prmtr -= 2
 
                 if (j != 0 and grid[i][j-1] == 1):
-                # If there is a 1 in the previous left square in the same raw
-                # remove 2 sides of inner square to open the road.
+                    # If there is a 1 in the left square in the same raw
+                    # remove 2 sides of inner square to open the road.
                     prmtr -= 2
 
     return prmtr
