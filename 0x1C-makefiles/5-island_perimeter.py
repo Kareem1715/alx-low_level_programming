@@ -16,15 +16,35 @@ has a grid that is a list of list of integers:
 
 def island_perimeter(grid):
     """ This function returns the perimeter of the island described in grid"""
-    sqr = 0
-    innersqr = 0
+    prmtr = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if (grid[i][j] == 1):
-                sqr += 1
-                if (i != 0 and grid[i-1][j] == 1):
-                    innersqr += 1
-                if (j != 0 and grid[i][j-1] == 1):
-                    innersqr += 1
+            # Each square has 4 sides.
+                prmtr += 4
+    
+                # Remove the sides between each two squares to make a road
+                # There are 2 sides of each square in inner land not in ending squares
+                # open the road
+                #+-------------------+
+                #|   |   |   |   |   |
+                #+===================+
+                #|   | 1 |   |   |   |
+                #+===    ============+
+                #|   | 1 |   |   |   |
+                #+===    ============+
+                #|   | 1   1   1 |   |
+                #+===================+
+                #|   |   |   |   |   |
+                #+-------------------+
+                if (i != 0 and grid[i-1][j] == 1) or ((j != 0 and grid[i][j-1] == 1)):
+                # If there is a 1 in the upper square in the same colown
+                # remove 2 sides of inner squares to open the road.
+                    prmtr -=2
 
-    return (sqr * 4) - (innersqr * 2)
+                if (j != 0 and grid[i][j-1] == 1):
+                # If there is a 1 in the previous left square in the same raw
+                # remove 2 sides of inner square to open the road.
+                    prmtr -= 2
+
+    return prmtr
